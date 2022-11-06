@@ -26,9 +26,9 @@ public class SubTechnologyManager implements SubTechnologyService {
     }
 
     @Override
-    public void add(CreateSubTechnologyRequest createSubTechnologyRequest) {
+    public void add(CreateSubTechnologyRequest createSubTechnologyRequest) throws Exception {
         ProgrammingLanguage programmingLanguage = programmingLanguageRepository.findById(createSubTechnologyRequest.getProgrammingLanguageId())
-                .orElse(null);
+                .orElseThrow(() -> new Exception("Programming language id does not exists"));
 
         SubTechnology subTechnology = new SubTechnology();
         subTechnology.setName(createSubTechnologyRequest.getName());

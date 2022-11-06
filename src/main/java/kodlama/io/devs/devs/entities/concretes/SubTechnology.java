@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "sub_technology")
+@Table(name = "sub_technologies")
 public class SubTechnology {
 
     @Id

@@ -19,7 +19,7 @@ public class SubTechnologyController {
     }
 
     @PostMapping("/add")
-    public void add(@RequestBody CreateSubTechnologyRequest createSubTechnologyRequest){
+    public void add(@RequestBody CreateSubTechnologyRequest createSubTechnologyRequest) throws Exception {
         subTechnologyService.add(createSubTechnologyRequest);
     }
 
